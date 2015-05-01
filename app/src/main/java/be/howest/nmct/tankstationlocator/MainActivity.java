@@ -10,6 +10,7 @@ public class MainActivity extends Activity {
 
     // Lat en long ophalen met deze site: http://www.latlong.net/
     // Tankstations: https://www.google.be/maps/search/tankstations+west+vlaanderen/@51.0331726,3.0382399,10z
+    // test
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
