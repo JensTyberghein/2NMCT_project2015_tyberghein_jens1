@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<tankstations>
+	<tankstation>
+		<id>0</id>
+		<naam>Station Delcour</naam>
+		<adres>Moeskroenstraat 397/A</adres>
+		<stad>8930 Rekkem</stad>
+		<latitude>50.788419</latitude>
+		<longitude>3.155519</longitude>
+	</tankstation>
+	<tankstation>
+		<id>1</id>
+		<naam>Total</naam>
+		<adres>Dronkckaertstraat 47</adres>
+		<stad>8930 Rekkem</stad>
+		<latitude>50.770429</latitude>
+		<longitude>3.166105</longitude>
+	</tankstation>
+	<tankstation>
+		<id>2</id>
+		<naam>Total Lauwe Delrue</naam>
+		<adres>Spoorwegstraat</adres>
+		<stad>8930 Lauwe</stad>
+		<latitude>51.186830</latitude>
+		<longitude>3.222407</longitude>
+	</tankstation>
+	<tankstation>
+		<id>3</id>
+		<naam>DATS 24 Menen</naam>
+		<adres>Ieperstraat 435</adres>
+		<stad>8930 Menen</stad>
+		<latitude>50.798175</latitude>
+		<longitude>3.113735</longitude>
+	</tankstation>
+	<tankstation>
+		<id>4</id>
+		<naam>DATS 24 Wevelgem</naam>
+		<adres>Kortrijkstraat 226</adres>
+		<stad>8560 Wevelgem</stad>
+		<latitude>50.812493</latitude>
+		<longitude>3.195771</longitude>
+	</tankstation>
+	<tankstation>
+		<id>5</id>
+		<naam>G&amp;V</naam>
+		<adres>Magdalenastraat 17</adres>
+		<stad>8500 Kortrijk</stad>
+		<latitude>50.778121</latitude>
+		<longitude>3.039953</longitude>
+	</tankstation>
+	<tankstation>
+		<id>6</id>
+		<naam>Total</naam>
+		<adres>Doorniksesteenweg 184</adres>
+		<stad>8500 Kortrijk</stad>
+		<latitude>50.817729</latitude>
+		<longitude>3.269529</longitude>
+	</tankstation>
+	<tankstation>
+		<id>7</id>
+		<naam>Q8 easy</naam>
+		<adres>Meensesteenweg 100</adres>
+		<stad>8500 Kortrijk</stad>
+		<latitude>50.826898</latitude>
+		<longitude>3.241421</longitude>
+	</tankstation>
+	<tankstation>
+		<id>8</id>
+		<naam>Delek Belgium</naam>
+		<adres>Kortrijkstraat 376/A</adres>
+		<stad>8560 Wevelgem</stad>
+		<latitude>50.816658</latitude>
+		<longitude>3.210639</longitude>
+	</tankstation>
+	<tankstation>
+		<id>9</id>
+		<naam>Q8 easy</naam>
+		<adres>Bruggestraat 327</adres>
+		<stad>8930 Menen</stad>
+		<latitude>50.797168</latitude>
+		<longitude>3.121857</longitude>
+	</tankstation>
+</tankstations>
