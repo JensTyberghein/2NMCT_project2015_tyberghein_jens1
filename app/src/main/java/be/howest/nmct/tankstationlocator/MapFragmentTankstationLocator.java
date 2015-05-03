@@ -32,19 +32,14 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
             }
         });
 
-        return view;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
         mMapFragment = MapFragment.newInstance();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.mapHolder, mMapFragment);
         fragmentTransaction.commit();
 
         mMapFragment.getMapAsync(this);
+
+        return view;
     }
 
     @Override
@@ -65,6 +60,7 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
         TankstationListFragment tankstationListFragment = new TankstationListFragment();
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.mainLayout,tankstationListFragment,"tankstationListFragment");
+        fragmentTransaction.addToBackStack("tankstationListFragment");
         fragmentTransaction.commit();
     }
 
