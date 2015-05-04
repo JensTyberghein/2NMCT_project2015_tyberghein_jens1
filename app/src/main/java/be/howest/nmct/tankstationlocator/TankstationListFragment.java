@@ -1,6 +1,8 @@
 package be.howest.nmct.tankstationlocator;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -33,7 +36,30 @@ public class TankstationListFragment extends Fragment {
         list = (ListView) view.findViewById(R.id.listView);
         TankstationAdapter adapter = new TankstationAdapter(getActivity(),tankstations);
         list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ItemClicked(parent,view,position,id);
+            }
+        });
+
         return view;
+    }
+
+    public void ItemClicked(AdapterView<?> parent, View view, int position, long id)
+    {
+        // Positie meegeven
+        Bundle arguments = new Bundle();
+        arguments.putInt("TankstationIndex",position);
+
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        TankstationInfoFragment tankstationInfoFragment = new TankstationInfoFragment();
+        tankstationInfoFragment.setArguments(arguments);
+        transaction.replace(R.id.TankstationListFragment, tankstationInfoFragment, "tankstationInfoFragment");
+        transaction.addToBackStack("tankstationInfoFragment");
+        transaction.commit();
     }
 }
 

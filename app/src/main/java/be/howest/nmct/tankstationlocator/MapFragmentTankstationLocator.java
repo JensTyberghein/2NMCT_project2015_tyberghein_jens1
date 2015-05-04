@@ -20,9 +20,13 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
     private MapFragment mMapFragment;
     private Button btnZoekTankstation;
 
+    // lat en long
+    double latitude;
+    double longitude;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_map,container,false);
+        View view = inflater.inflate(R.layout.fragment_map, container, false);
 
         btnZoekTankstation = (Button) view.findViewById(R.id.btnZoekTankstation);
         btnZoekTankstation.setOnClickListener(new View.OnClickListener() {
@@ -39,12 +43,25 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
 
         mMapFragment.getMapAsync(this);
 
+
+
+        if(this.getArguments() != null){
+            Bundle bundle = this.getArguments();
+            latitude = bundle.getDouble("latitude", 0);
+            longitude = bundle.getDouble("longitude", 0);
+        }
+
         return view;
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         LatLng rekkem = new LatLng(50.782807, 3.164113);
+
+        if(latitude != 0 && longitude != 0){
+            rekkem = new LatLng(latitude, longitude);
+        }
 
         googleMap.setMyLocationEnabled(true);
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(rekkem, 13));

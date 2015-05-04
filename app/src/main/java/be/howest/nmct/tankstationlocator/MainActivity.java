@@ -15,6 +15,10 @@ public class MainActivity extends Activity {
     // API KEY: AIzaSyCYU0zYi2z6j3pMoH1RVniddf9CSS3wx24
     // C:\Users\jens\AppData\Local\Android\sdk1\extras\google\google_play_services
 
+    // Referenties naar de fragements
+    TankstationInfoFragment tankstationInfoFragment;
+    TankstationListFragment tankstationListFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
