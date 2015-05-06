@@ -5,10 +5,12 @@
 
 
     <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="Station Delcour"
         android:id="@+id/txtInfoNaam"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -24,5 +26,55 @@
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgTankstation"
+        android:src="@drawable/test"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignTop="@+id/txtInfoNaam"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Adres: "
+        android:id="@+id/textView"
+        android:layout_below="@+id/imgTankstation"
+        android:layout_alignStart="@+id/txtInfoNaam" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Moeskroenstraat 397/A"
+        android:id="@+id/txtInfoAdres"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Stad: "
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="8930 Menen"
+        android:id="@+id/txtInfoStad"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
 
 </RelativeLayout>
