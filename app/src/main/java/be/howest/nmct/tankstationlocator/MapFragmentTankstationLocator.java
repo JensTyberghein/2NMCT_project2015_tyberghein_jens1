@@ -80,5 +80,4 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
         fragmentTransaction.addToBackStack("tankstationListFragment");
         fragmentTransaction.commit();
     }
-
 }

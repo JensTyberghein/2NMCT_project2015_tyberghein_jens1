@@ -20,6 +20,7 @@ public class MyXmlPullParser {
     static final String KEY_STAD = "stad";
     static final String KEY_LATITUDE = "latitude";
     static final String KEY_LONGITUDE = "longitude";
+    static final String KEY_TELEFOON = "telefoon";
 
     public static List<Tankstation> getTankstationsFromFile(Context ctx){
 
@@ -55,7 +56,8 @@ public class MyXmlPullParser {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if(tagname.equalsIgnoreCase(KEY_TANKSTATION)){    // if </longitude> -> klaar met dit opbject -> add to list
+                        if(tagname.equalsIgnoreCase(KEY_TELEFOON)){    // if </telefoon> -> klaar met dit opbject -> add to list
+                            curTankstation.setTelefoon(curText);
                             tankstations.add(curTankstation);
                         } else if (tagname.equalsIgnoreCase(KEY_ID)) {
                             // if </id> use setName van cutTankstation

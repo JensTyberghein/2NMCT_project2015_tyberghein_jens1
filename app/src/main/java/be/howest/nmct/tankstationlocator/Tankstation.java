@@ -9,6 +9,7 @@ public class Tankstation {
     private String stad;
     private Double latitude;
     private Double longitude;
+    private String telefoon;
 
     public int getId() {
         return id;
@@ -58,8 +59,16 @@ public class Tankstation {
         this.longitude = longitude;
     }
 
+    public String getTelefoon(){
+        return telefoon;
+    }
+
+    public void setTelefoon(String telefoon){
+        this.telefoon = telefoon;
+    }
+
     @Override
     public String toString() {
-        return "id: " + id + " | naam: " + naam + " | adres: " + adres + " | stad: " + stad + " | latitude: " + latitude + " | longitude: " + longitude;
+        return "id: " + id + " | naam: " + naam + " | adres: " + adres + " | stad: " + stad + " | latitude: " + latitude + " | longitude: " + longitude + " | telefoon : " + telefoon + ".";
     }
 }

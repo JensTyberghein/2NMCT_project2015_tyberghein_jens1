@@ -7,6 +7,7 @@
 		<stad>8930 Rekkem</stad>
 		<latitude>50.788419</latitude>
 		<longitude>3.155519</longitude>
+		<telefoon>056 41 30 67</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>1</id>
@@ -15,6 +16,7 @@
 		<stad>8930 Rekkem</stad>
 		<latitude>50.770429</latitude>
 		<longitude>3.166105</longitude>
+		<telefoon>056 41 78 56</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>2</id>
@@ -23,6 +25,7 @@
 		<stad>8930 Lauwe</stad>
 		<latitude>51.186830</latitude>
 		<longitude>3.222407</longitude>
+		<telefoon>056 42 84 30</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>3</id>
@@ -31,6 +34,7 @@
 		<stad>8930 Menen</stad>
 		<latitude>50.798175</latitude>
 		<longitude>3.113735</longitude>
+		<telefoon>023 63 51 52</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>4</id>
@@ -39,6 +43,7 @@
 		<stad>8560 Wevelgem</stad>
 		<latitude>50.812493</latitude>
 		<longitude>3.195771</longitude>
+		<telefoon>023 63 51 52</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>5</id>
@@ -47,6 +52,7 @@
 		<stad>8500 Kortrijk</stad>
 		<latitude>50.778121</latitude>
 		<longitude>3.039953</longitude>
+		<telefoon>056 73 30 00</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>6</id>
@@ -55,6 +61,7 @@
 		<stad>8500 Kortrijk</stad>
 		<latitude>50.817729</latitude>
 		<longitude>3.269529</longitude>
+		<telefoon>056 21 32 28</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>7</id>
@@ -63,6 +70,7 @@
 		<stad>8500 Kortrijk</stad>
 		<latitude>50.826898</latitude>
 		<longitude>3.241421</longitude>
+		<telefoon>032 41 33 00</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>8</id>
@@ -71,6 +79,7 @@
 		<stad>8560 Wevelgem</stad>
 		<latitude>50.816658</latitude>
 		<longitude>3.210639</longitude>
+		<telefoon>056 40 08 95</telefoon>
 	</tankstation>
 	<tankstation>
 		<id>9</id>
@@ -79,5 +88,6 @@
 		<stad>8930 Menen</stad>
 		<latitude>50.797168</latitude>
 		<longitude>3.121857</longitude>
+		<telefoon>032 41 33 00</telefoon>
 	</tankstation>
 </tankstations>

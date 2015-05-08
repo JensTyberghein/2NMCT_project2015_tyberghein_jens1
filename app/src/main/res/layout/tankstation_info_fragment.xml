@@ -7,13 +7,14 @@
     <TextView
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Station Delcour"
         android:id="@+id/txtInfoNaam"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -36,7 +37,7 @@
         android:layout_marginRight="15dp"
         android:layout_alignTop="@+id/txtInfoNaam"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         />
 
     <TextView
@@ -76,5 +77,34 @@
         android:id="@+id/txtInfoStad"
         android:layout_alignTop="@+id/textView3"
         android:layout_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="tel: "
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView3"
+        android:layout_toStartOf="@+id/txtInfoStad"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="056 42 44 02"
+        android:id="@+id/txtTelefoon"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginTop="1dp"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btnBellen"
+        android:background="@drawable/iconbellen"
+        android:layout_alignBottom="@+id/txtInfoNaam"
+        android:layout_alignEnd="@+id/imgTankstation" />
+
 
 </RelativeLayout>
