@@ -2,6 +2,10 @@ package be.howest.nmct.tankstationlocator;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -19,6 +23,8 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
 
     private MapFragment mMapFragment;
     private Button btnZoekTankstation;
+
+    public  MapFragmentTankstationLocator(){}
 
     // lat en long
     double latitude;
@@ -57,19 +63,40 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        LatLng rekkem = new LatLng(50.782807, 3.164113);
+        googleMap.setMyLocationEnabled(true);
 
-        if(latitude != 0 && longitude != 0){
-            rekkem = new LatLng(latitude, longitude);
+        LatLng nowPos;
+
+        if(latitude == 0 && longitude == 0){
+            // Eigen positie ophalen
+            LocationManager locationManager = (LocationManager) getActivity().getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
+            Criteria criteria = new Criteria();
+            String provider = locationManager.getBestProvider(criteria, true);
+            Location myLocation = locationManager.getLastKnownLocation(provider);
+
+            if(myLocation != null){
+                double lati = myLocation.getLatitude();
+                double longi = myLocation.getLongitude();
+                nowPos = new LatLng(lati, longi);
+            }
+            else{
+                //standaarWaarde instoppen
+                nowPos = new LatLng(50.824350, 3.250059);
+            }
+
+
+
+        }
+        else{
+            nowPos = new LatLng(latitude, longitude);
         }
 
-        googleMap.setMyLocationEnabled(true);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(rekkem, 13));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(nowPos, 13));
 
         googleMap.addMarker(new MarkerOptions()
-                .title("Rekkem")
-                .snippet("City of Rekkem")
-                .position(rekkem));
+                .title("You")
+                .snippet("You Are Here")
+                .position(nowPos));
 
     }
 
