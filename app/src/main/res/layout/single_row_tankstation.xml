@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#CACBEB" android:layout_margin="20dp">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -20,7 +20,8 @@
         android:id="@+id/txtNaam"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/imgIcon"
-        android:layout_marginBottom="-3dp"/>
+        android:layout_marginBottom="-3dp"
+        android:textColor="#0C217D"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +30,8 @@
         android:text="Moeskroenstraat 397/A"
         android:id="@+id/txtAdres"
         android:layout_below="@+id/txtNaam"
-        android:layout_toEndOf="@+id/imgIcon" />
+        android:layout_toEndOf="@+id/imgIcon"
+        android:textColor="#0C217D"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,6 +40,7 @@
         android:text="8930 Rekkem"
         android:id="@+id/txtStad"
         android:layout_below="@+id/txtAdres"
-        android:layout_toEndOf="@+id/imgIcon" />
+        android:layout_toEndOf="@+id/imgIcon"
+        android:textColor="#0C217D"/>
 
 </RelativeLayout>

@@ -21,10 +21,10 @@
 	<tankstation>
 		<id>2</id>
 		<naam>Total Lauwe Delrue</naam>
-		<adres>Spoorwegstraat</adres>
+		<adres>Spoorwegstraat 49</adres>
 		<stad>8930 Lauwe</stad>
-		<latitude>51.186830</latitude>
-		<longitude>3.222407</longitude>
+		<latitude>50.792882</latitude>
+		<longitude>3.198690</longitude>
 		<telefoon>056 42 84 30</telefoon>
 	</tankstation>
 	<tankstation>
