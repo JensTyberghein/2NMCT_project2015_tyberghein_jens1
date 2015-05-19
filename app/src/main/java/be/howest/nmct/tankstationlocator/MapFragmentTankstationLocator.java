@@ -29,6 +29,10 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
     // lat en long
     double latitude;
     double longitude;
+    String bundelTitle;
+    String bundelSnippet;
+    String title;
+    String snippet;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -49,13 +53,15 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
 
         mMapFragment.getMapAsync(this);
 
-
-
         if(this.getArguments() != null){
             Bundle bundle = this.getArguments();
             latitude = bundle.getDouble("latitude", 0);
             longitude = bundle.getDouble("longitude", 0);
+            bundelTitle = bundle.getString("Title", "");
+            bundelSnippet = bundle.getString("Snippet", "");
         }
+
+        getActivity().getActionBar().setTitle("Tankstation Locator");
 
         return view;
     }
@@ -68,6 +74,9 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
         LatLng nowPos;
 
         if(latitude == 0 && longitude == 0){
+            title = "You";
+            snippet = "Your location";
+
             // Eigen positie ophalen
             LocationManager locationManager = (LocationManager) getActivity().getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
             Criteria criteria = new Criteria();
@@ -89,13 +98,18 @@ public class MapFragmentTankstationLocator extends Fragment implements OnMapRead
         }
         else{
             nowPos = new LatLng(latitude, longitude);
+
+            title = bundelTitle;
+            snippet = bundelSnippet;
         }
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(nowPos, 13));
 
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
+
         googleMap.addMarker(new MarkerOptions()
-                .title("You")
-                .snippet("You Are Here")
+                .title(title)
+                .snippet(snippet)
                 .position(nowPos));
 
     }

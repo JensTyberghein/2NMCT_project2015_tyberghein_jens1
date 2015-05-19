@@ -87,6 +87,8 @@ public class TankstationInfoFragment extends Fragment {
 
         afstandBerekenen();
 
+
+
         return view;
     }
 
@@ -101,6 +103,8 @@ public class TankstationInfoFragment extends Fragment {
 
         latitude = tankstations.get(index).getLatitude();
         longitude = tankstations.get(index).getLongitude();
+
+        getActivity().getActionBar().setTitle("Info " + txtInfoNaam.getText());
     }
 
     public void btnToonOpMapClicked(){
@@ -108,6 +112,9 @@ public class TankstationInfoFragment extends Fragment {
         Bundle arguments = new Bundle();
         arguments.putDouble("latitude", latitude);
         arguments.putDouble("longitude", longitude);
+        arguments.putString("Title", "" + txtInfoNaam.getText());
+        arguments.putString("Snippet", "" + txtInfoAdres.getText());
+
 
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

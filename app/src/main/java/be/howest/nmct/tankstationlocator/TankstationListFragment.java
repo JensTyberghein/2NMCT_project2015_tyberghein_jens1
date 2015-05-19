@@ -41,9 +41,11 @@ public class TankstationListFragment extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ItemClicked(parent,view,position,id);
+                ItemClicked(parent, view, position, id);
             }
         });
+
+        getActivity().getActionBar().setTitle("Kies een tankstation");
 
         return view;
     }
