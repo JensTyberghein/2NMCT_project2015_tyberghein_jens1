@@ -109,16 +109,19 @@ public class TankstationInfoFragment extends Fragment {
 
     public void btnToonOpMapClicked(){
 
+        // 1) Bundel aanmaken + info instoppen
         Bundle arguments = new Bundle();
         arguments.putDouble("latitude", latitude);
         arguments.putDouble("longitude", longitude);
         arguments.putString("Title", "" + txtInfoNaam.getText());
         arguments.putString("Snippet", "" + txtInfoAdres.getText());
 
-
+        // 2) Manager + transactie, en fragment aanmaken die je wil tonen
         FragmentManager manager = getFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         MapFragmentTankstationLocator fragment = new MapFragmentTankstationLocator();
+
+        // 3) De argumenten toevoegen, fragment replace altijd van MainLayout, commit
         fragment.setArguments(arguments);
         transaction.replace(R.id.mainLayout, fragment, "MapFragmentTankstationLocator");
         transaction.commit();
